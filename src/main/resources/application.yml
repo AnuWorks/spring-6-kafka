@@ -5,6 +5,7 @@ spring:
   application:
     name: spring-6-kafka
   kafka:
+    topic: orders.DLQ
     bootstrap-servers: localhost:9092
     producer:
       key-serializer: org.apache.kafka.common.serialization.StringSerializer

@@ -16,12 +16,10 @@ public class KafkaProducerService {
 
     public void sendMessage(String message) {
         kafkaTemplate.send(TOPIC, message);
-        System.out.println("Sent message: " + message);
     }
 
     public void sendMessage(String topic, String message) {
         kafkaTemplate.send(topic, message);
-        System.out.println("Message sent: " + message);
     }
 
     void sendToDLQ(String message) {
